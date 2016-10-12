@@ -11,9 +11,9 @@ class StocksController < ApplicationController
     if @stock
       # Esto me genera la salida del JSON
       # Esta es una buena manera de saber si esta funcionando
-      render json: @stock
+      # render json: @stock
       # -> "_name.html.erb" is a partial
-      # render partial: 'lookup'
+      render partial: 'lookup'
     else
       render status: :not_found, nothing:  true;
     end
